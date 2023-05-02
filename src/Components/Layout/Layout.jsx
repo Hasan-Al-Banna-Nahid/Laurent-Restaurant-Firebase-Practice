@@ -9,7 +9,6 @@ const layout = () => {
   return (
     <div>
       <Header />
-      <Banner />
       <Outlet />
     </div>
   );
