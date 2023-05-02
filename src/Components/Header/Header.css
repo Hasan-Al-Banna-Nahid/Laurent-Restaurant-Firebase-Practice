@@ -19,3 +19,12 @@
   color: #2c3a47;
   font-weight: 800;
 }
+@media screen and (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    min-width: fit-content;
+  }
+  .navbar a {
+    display: block;
+  }
+}
