@@ -30,8 +30,8 @@ body {
   place-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Inconsolata", monospace;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inconsolata", monospace !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 h1 {

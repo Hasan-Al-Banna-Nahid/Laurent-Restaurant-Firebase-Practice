@@ -1,0 +1,22 @@
+.banner-image {
+  margin: 0 auto;
+  height: 600px;
+}
+.slider {
+  padding: 0 10px;
+}
+.caption1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: whitesmoke;
+}
+.caption2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #2f3542;
+}
+.caption3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #b53471;
+}
