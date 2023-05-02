@@ -13,9 +13,15 @@ const Banner = () => {
               className="d-block w-100 banner-image"
               alt="..."
             />
-            <div className="carousel-caption d-none d-md-block caption1">
+            <div className="carousel-caption  d-md-block caption1">
               <h5>Texas-Style Beef Brisket</h5>
               <p>A Traditional Texas Beef Item</p>
+              <button
+                style={{ color: "#2f3542", fontWeight: "bold" }}
+                className="btn btn-primary"
+              >
+                See Recipe
+              </button>
             </div>
           </div>
           <div className="carousel-item">
@@ -24,9 +30,15 @@ const Banner = () => {
               className="d-block w-100 banner-image"
               alt="..."
             />
-            <div className="carousel-caption d-none d-md-block caption2">
+            <div className="carousel-caption  d-md-block caption2">
               <h5>HamBurger With French Fries</h5>
               <p>Wonderful Combination Of Burger & Fries</p>
+              <button
+                style={{ color: "#2f3542", fontWeight: "bold" }}
+                className="btn btn-primary"
+              >
+                See Recipe
+              </button>
             </div>
           </div>
           <div className="carousel-item">
@@ -35,9 +47,15 @@ const Banner = () => {
               className="d-block w-100 banner-image"
               alt="..."
             />
-            <div className="carousel-caption d-none d-md-block caption3">
+            <div className="carousel-caption  d-md-block caption3">
               <h5>Black Coffee With Hand Made Biscuit</h5>
               <p>Strong Combination Of Coffee & Biscuit</p>
+              <button
+                style={{ color: "#2f3542", fontWeight: "bold" }}
+                className="btn btn-primary"
+              >
+                See Recipe
+              </button>
             </div>
           </div>
         </div>
