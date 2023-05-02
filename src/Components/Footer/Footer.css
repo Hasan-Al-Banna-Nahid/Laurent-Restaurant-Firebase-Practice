@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: fit-content;
+  padding: 10px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+.footer h3 {
+  color: #130f40;
+  font-weight: 800;
+}
+.links a {
+  display: block;
+  padding: 10px 0;
+}
