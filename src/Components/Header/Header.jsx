@@ -3,9 +3,9 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { FaSignInAlt } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -24,7 +24,9 @@ const Header = () => {
           <Link>About Us</Link>
           <Link>Contact Us</Link>
         </div>
-        <div></div>
+        <div style={{ padding: "10px", fontSize: "2rem" }}>
+          <FaSignInAlt />
+        </div>
       </div>
     </div>
   );
