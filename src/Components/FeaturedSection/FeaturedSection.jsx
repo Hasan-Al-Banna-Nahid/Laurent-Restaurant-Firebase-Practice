@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./FeaturedSection.css";
+import Seasonal from "../Seasonal/Seasonal";
 
 const FeaturedSection = () => {
   return (
@@ -10,7 +11,7 @@ const FeaturedSection = () => {
         <hr />
         <h4 className="subtitle">Everything You Want To Know</h4>
       </div>
-      <div className="card-group lg-mx-auto lg-px-5">
+      <div className="card-group mx-auto px-5">
         <div className="card">
           <img
             src="../../../public/assests/food.jpg"
@@ -20,9 +21,9 @@ const FeaturedSection = () => {
           <div className="card-body">
             <h5 className="card-title">Fresh Taste</h5>
             <p className="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              A light and crisp taste. Often used to describe produce or herbs.
+              Fruity: Any taste reminiscent of sweet fruit flavors. Full-bodied:
+              Rich flavor that can feel heavy in the mouth.
             </p>
           </div>
         </div>
@@ -35,8 +36,11 @@ const FeaturedSection = () => {
           <div className="card-body">
             <h5 className="card-title">Made With Love</h5>
             <p className="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
+              There are numerous terms that could be used to describe a person
+              who is passionate about food and cooking. Like "food lover" or
+              "gourmand" or "cuisine connoisseur" or even "food nerd." However,
+              in our modern culture, "foodie" is the label that seems to stick
+              like an al dente noodle on a wall.
             </p>
           </div>
         </div>
@@ -49,13 +53,12 @@ const FeaturedSection = () => {
           <div className="card-body">
             <h5 className="card-title">Taste The Difference</h5>
             <p className="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
+              Try Our Food And You Feel The Difference.
             </p>
           </div>
         </div>
       </div>
+      <Seasonal />
     </div>
   );
 };
