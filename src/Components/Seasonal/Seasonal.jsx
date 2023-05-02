@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Seasonal.css";
+import Team from "../Team/Team";
 
 const Seasonal = () => {
   return (
@@ -62,6 +63,7 @@ const Seasonal = () => {
           </div>
         </div>
       </div>
+      <Team />
     </div>
   );
 };

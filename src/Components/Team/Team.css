@@ -1,0 +1,26 @@
+.chef {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 0 auto;
+  width: 1000px;
+}
+.designation {
+  text-align: left;
+  color: #34495e;
+  font-weight: 800;
+}
+.name {
+  font-size: 2rem;
+  text-align: left;
+}
+.info {
+  color: #130f40;
+  font-weight: 700;
+}
