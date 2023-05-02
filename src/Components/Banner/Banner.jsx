@@ -4,11 +4,8 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div>
-      <div
-        id="carouselExample"
-        className="carousel slide rounded-2 mx-auto ps-5 "
-      >
+    <div className="w-100">
+      <div id="carouselExample" className="carousel slide rounded-2 mx-auto ">
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
