@@ -24,3 +24,10 @@
   color: #130f40;
   font-weight: 700;
 }
+@media screen and (max-width: 576px) {
+  .team {
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+  }
+}
