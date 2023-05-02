@@ -6,6 +6,7 @@
   padding: 10px;
   font-weight: 600;
   margin-top: 50px;
+  color: #2c3a47;
 }
 .footer h3 {
   color: #130f40;
@@ -14,4 +15,16 @@
 .links a {
   display: block;
   padding: 10px 0;
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    gap: 10px;
+  }
 }

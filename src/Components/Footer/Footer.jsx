@@ -12,10 +12,9 @@ const Footer = () => {
           <div>
             <h3>Our Story</h3>
             <p>
-              We Are Best American Food Server With Best Of Chef And
-              <br /> Wonderful Collection Of Traditional & Desert Items
+              We Are Best American Food Server With Best Of Chef And Wonderful{" "}
               <br />
-              According to your needs.
+              Collection Of Traditional & Desert Items According to your needs.
             </p>
             <p>
               <FaClock /> Sat-Fri 8:00 - 10:00

@@ -22,4 +22,10 @@
   .card {
     width: fit-content;
   }
+  .title {
+    font-size: 2rem;
+  }
+  .package {
+    text-align: center;
+  }
 }

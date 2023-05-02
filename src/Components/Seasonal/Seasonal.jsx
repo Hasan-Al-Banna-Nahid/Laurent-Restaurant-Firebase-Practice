@@ -28,7 +28,7 @@ const Seasonal = () => {
                     </h5>
                   </div>
                   <div>
-                    <h4>Starter</h4>
+                    <h4 className="package">Starter</h4>
                     <p className="card-text subtitle">
                       Try Our Everyday Starter At Reasonable Price
                     </p>
@@ -52,7 +52,7 @@ const Seasonal = () => {
                     </h5>
                   </div>
                   <div>
-                    <h4>Premium</h4>
+                    <h4 className="package">Premium</h4>
                     <p className="card-text subtitle">
                       Try Our Holiday Special At Happy Price
                     </p>
