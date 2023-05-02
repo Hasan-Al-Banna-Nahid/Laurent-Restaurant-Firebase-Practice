@@ -10,7 +10,7 @@ const FeaturedSection = () => {
         <hr />
         <h4 className="subtitle">Everything You Want To Know</h4>
       </div>
-      <div className="card-group mx-auto px-5">
+      <div className="card-group lg-mx-auto lg-px-5">
         <div className="card">
           <img
             src="../../../public/assests/food.jpg"

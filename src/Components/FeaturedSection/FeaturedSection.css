@@ -9,3 +9,13 @@
   font-weight: 700;
   font-family: "Inconsolata";
 }
+@media screen and (max-width: 576px) {
+  .subtitle {
+    font-size: 14px;
+  }
+  .card-group {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+  }
+}
