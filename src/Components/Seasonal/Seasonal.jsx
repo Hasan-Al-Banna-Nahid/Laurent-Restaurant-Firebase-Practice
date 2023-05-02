@@ -20,7 +20,7 @@ const Seasonal = () => {
                 alt="..."
               />
               <div className="card-body">
-                <div className="d-flex align-items-center justify-content-evenly">
+                <div className="d-flex align-items-center justify-content-evenly price">
                   <div>
                     <h5 className="card-title title">
                       <sup>$</sup>50
@@ -44,7 +44,7 @@ const Seasonal = () => {
                 alt="..."
               />
               <div className="card-body">
-                <div className="d-flex align-items-center justify-content-evenly ">
+                <div className="d-flex align-items-center justify-content-evenly price">
                   <div className="price">
                     <h5 className="card-title title">
                       <sup>$</sup>100
