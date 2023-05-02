@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Team.css";
+import Sponsor from "../Sponsor/Sponsor";
 
 const Team = () => {
   return (
@@ -46,6 +47,7 @@ const Team = () => {
           </p>
         </div>
       </div>
+      <Sponsor />
     </div>
   );
 };
