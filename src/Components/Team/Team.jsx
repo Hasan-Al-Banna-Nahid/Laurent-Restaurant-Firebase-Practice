@@ -7,7 +7,9 @@ const Team = () => {
   return (
     <div style={{ margin: "50px 0" }}>
       <h3 className="title">The Team</h3>
-      <h5 className="subtitle">Meet Our Chefs</h5>
+      <h5 className="subtitle" style={{ margin: "20px 0" }}>
+        Meet Our Chefs
+      </h5>
       <div className="team">
         <div>
           <img
