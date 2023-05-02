@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Banner.css";
+import FeaturedSection from "../FeaturedSection/FeaturedSection";
 
 const Banner = () => {
   return (
@@ -84,6 +85,7 @@ const Banner = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <FeaturedSection />
     </div>
   );
 };
