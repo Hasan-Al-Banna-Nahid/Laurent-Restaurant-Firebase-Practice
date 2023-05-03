@@ -52,7 +52,7 @@ const Banner = () => {
               <h5>Black Coffee With Hand Made Biscuit</h5>
               <p>Strong Combination Of Coffee & Biscuit</p>
               <button
-                style={{ color: "#2f3542", fontWeight: "bold" }}
+                style={{ color: "#130f40", fontWeight: "bold" }}
                 className="btn btn-primary"
               >
                 See Recipe

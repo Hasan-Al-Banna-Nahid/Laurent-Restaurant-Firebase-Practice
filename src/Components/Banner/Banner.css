@@ -2,22 +2,25 @@
   margin: 0 auto;
   height: 600px;
   object-fit: cover;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .caption1 {
   font-size: 2.3rem;
   font-weight: 800;
-  color: whitesmoke;
+  color: #ff3f34;
 }
 .caption2 {
   font-size: 2.3rem;
   font-weight: 800;
-  color: #2f3542;
+  color: #ffdd59;
 }
 .caption3 {
   font-size: 2.3rem;
   font-weight: 800;
-  color: #b53471;
+  color: #130f40;
+  opacity: 5;
 }
 .carousel-inner {
   width: 100vw;
