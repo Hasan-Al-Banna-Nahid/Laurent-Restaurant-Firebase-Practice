@@ -25,6 +25,14 @@ const Registration = () => {
     setSuccess("");
     setError("");
 
+    if (password !== confirmPassword) {
+      toast("Sorry!!!Password Didn't Match,Please Try Again");
+      return;
+    }
+    if (password.length < 6) {
+      toast("Sorry!!!Password Length Should Be Six Character Long");
+      return;
+    }
     emailPasswordSignUpHandler(email, password)
       .then((result) => {
         const user = result.user;
@@ -38,6 +46,7 @@ const Registration = () => {
         console.log(err.message);
         setError(error.message);
         setSuccess("");
+        form.reset();
       });
   };
 
