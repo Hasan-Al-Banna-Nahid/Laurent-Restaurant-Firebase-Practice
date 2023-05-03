@@ -1,10 +1,46 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext, useState } from "react";
 import { FaAutoprefixer, FaCircle } from "react-icons/fa";
 import "./Registration.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/Provider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const { emailPasswordSignUpHandler } = useContext(AuthContext);
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const name = form.name.value;
+    const password = form.password.value;
+    const confirmPassword = form.confirmPassword.value;
+
+    setSuccess("");
+    setError("");
+
+    emailPasswordSignUpHandler(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast("User Created Successfully");
+        setSuccess("User Created Successfully");
+        setError("");
+        form.reset();
+      })
+      .catch((err) => {
+        console.log(err.message);
+        setError(error.message);
+        setSuccess("");
+      });
+  };
+
   return (
     <div>
       <div className="register">
@@ -47,20 +83,43 @@ const Registration = () => {
           >
             Sign Up For Free
           </h4>
-          <form>
-            <input type="text" name="name" id="" placeholder="Your Full Name" />
-            <input type="email" name="email" id="" placeholder="Your Email" />
+          <form onSubmit={handleSignUp}>
+            <input
+              type="text"
+              name="name"
+              id=""
+              placeholder="Your Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Your Email"
+              required
+            />
+
+            <input
+              type="file"
+              name="photo"
+              id=""
+              placeholder="Your Photo"
+              required
+            />
+
             <input
               type="password"
               name="password"
               id=""
               placeholder="Your Password"
+              required
             />
             <input
               type="password"
               name="confirmPassword"
               id=""
               placeholder="Please Confirm Password"
+              required
             />
             <div>
               <button className="btn btn-primary fs-2 w-100">Register</button>
@@ -76,6 +135,7 @@ const Registration = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
