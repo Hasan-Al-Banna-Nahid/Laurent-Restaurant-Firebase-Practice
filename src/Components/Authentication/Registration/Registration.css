@@ -1,0 +1,44 @@
+.register {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  border-top: 3rem solid #c3c9ca;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-radius: 8px;
+  margin-bottom: 160px;
+}
+.socialLink {
+  background-color: #2c324e;
+  padding: 30px;
+  border-radius: 8px;
+}
+input {
+  display: block;
+  margin: 20px 15px;
+  width: 400px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  border-bottom: 1.5px solid #1e272e;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+::placeholder {
+  font-size: 2rem;
+}
+.loginCredential {
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 15px;
+}
+.appleBtn {
+  position: relative;
+  bottom: 43px;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.btn {
+  width: 70%;
+}

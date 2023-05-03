@@ -26,7 +26,9 @@ const Header = () => {
           <Link>Contact Us</Link>
         </div>
         <div style={{ padding: "10px", fontSize: "2rem" }}>
-          <FaSignInAlt />
+          <Link to="/register">
+            <FaSignInAlt />
+          </Link>
         </div>
       </div>
     </div>
