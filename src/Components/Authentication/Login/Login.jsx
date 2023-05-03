@@ -46,7 +46,7 @@ const Login = () => {
               Authentication
             </h4>
             <h5>Login Using With Your Favorite Preference</h5>
-            <div>
+            <div style={{ marginTop: "100px" }}>
               <button
                 className="btn btn-outline-success loginBtn"
                 style={{ margin: "10px 0" }}
@@ -61,9 +61,6 @@ const Login = () => {
                 Login With Github
               </button>
               <br />
-              <button className="btn btn-outline-info loginBtn">
-                Login With Email-Password
-              </button>
             </div>
           </div>
         </div>

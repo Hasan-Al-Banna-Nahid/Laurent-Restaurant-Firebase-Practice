@@ -10,6 +10,7 @@ import { AuthContext } from "../Authentication/Provider/Provider";
 
 const Header = () => {
   const { user, logOutHandler } = useContext(AuthContext);
+  console.log(user);
   const handleLogOut = () => {
     logOutHandler()
       .then((result) => console.log(result.user))
@@ -34,7 +35,18 @@ const Header = () => {
         </div>
         <div style={{ padding: "10px", fontSize: "2rem" }}>
           <Link to="/register">
-            {user && user.email}
+            {user && (
+              <img
+                style={{
+                  borderRadius: "50%",
+                  width: "80px",
+                  height: "80px",
+                  padding: "10px",
+                }}
+                src={user.photoURL}
+                alt=""
+              />
+            )}
 
             {user ? <FaSignOutAlt onClick={handleLogOut} /> : <FaSignInAlt />}
           </Link>
