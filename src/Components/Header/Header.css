@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 1300px;
+  min-width: 1000px;
 }
 .brand {
   color: #b53471;

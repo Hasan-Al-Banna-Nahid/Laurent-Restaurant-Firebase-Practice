@@ -1,13 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { FaSignInAlt } from "react-icons/fa";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { AuthContext } from "../Authentication/Provider/Provider";
 
 const Header = () => {
+  const { user, logOutHandler } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOutHandler()
+      .then((result) => console.log(result.user))
+      .catch((err) => console.log(err.message));
+  };
   return (
     <div>
       <div className="navbar">
@@ -27,7 +34,9 @@ const Header = () => {
         </div>
         <div style={{ padding: "10px", fontSize: "2rem" }}>
           <Link to="/register">
-            <FaSignInAlt />
+            {user && user.email}
+
+            {user ? <FaSignOutAlt onClick={handleLogOut} /> : <FaSignInAlt />}
           </Link>
         </div>
       </div>

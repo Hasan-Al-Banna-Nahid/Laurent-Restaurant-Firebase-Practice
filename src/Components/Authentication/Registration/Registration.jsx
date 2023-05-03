@@ -64,23 +64,23 @@ const Registration = () => {
               <FaAutoprefixer style={{ color: "#05c46b", fontSize: "2rem" }} />{" "}
               Authentication
             </h4>
-            <h5>Login Using Your Favorite Preference</h5>
+            <h5>Login Using With Your Favorite Preference</h5>
             <div>
               <button
-                className="btn btn-outline-success"
+                className="btn btn-outline-success loginBtn"
                 style={{ margin: "10px 0" }}
               >
                 Login With Google
               </button>
               <br />
               <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark loginBtn"
                 style={{ margin: "30px 0" }}
               >
                 Login With Github
               </button>
               <br />
-              <button className="btn btn-outline-info">
+              <button className="btn btn-outline-info loginBtn">
                 Login With Email-Password
               </button>
             </div>
@@ -108,13 +108,7 @@ const Registration = () => {
               required
             />
 
-            <input
-              type="file"
-              name="photo"
-              id=""
-              placeholder="Your Photo"
-              required
-            />
+            <input type="file" name="photo" id="" placeholder="Your Photo" />
 
             <input
               type="password"

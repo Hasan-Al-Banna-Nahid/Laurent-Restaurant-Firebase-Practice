@@ -1,10 +1,36 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Login.css";
 import { FaAutoprefixer, FaCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/Provider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  const { user, loginHandler } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    setError("");
+    setSuccess("");
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    loginHandler(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        toast("User Login Successfully");
+        navigate("/");
+      })
+      .catch((err) => {
+        toast("Sorry!!!Your Email & Password Did Not Match");
+      });
+  };
   return (
     <div>
       <div className="register">
@@ -19,23 +45,23 @@ const Login = () => {
               <FaAutoprefixer style={{ color: "#05c46b", fontSize: "2rem" }} />{" "}
               Authentication
             </h4>
-            <h5>Login Using Your Favorite Preference</h5>
+            <h5>Login Using With Your Favorite Preference</h5>
             <div>
               <button
-                className="btn btn-outline-success"
+                className="btn btn-outline-success loginBtn"
                 style={{ margin: "10px 0" }}
               >
                 Login With Google
               </button>
               <br />
               <button
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark loginBtn"
                 style={{ margin: "30px 0" }}
               >
                 Login With Github
               </button>
               <br />
-              <button className="btn btn-outline-info">
+              <button className="btn btn-outline-info loginBtn">
                 Login With Email-Password
               </button>
             </div>
@@ -45,9 +71,9 @@ const Login = () => {
           <h4
             style={{ textAlign: "center", fontSize: "2rem", fontWeight: "800" }}
           >
-            Sign Up For Free
+            Please Login
           </h4>
-          <form>
+          <form onSubmit={handleLogin}>
             <input type="email" name="email" id="" placeholder="Your Email" />
             <input
               type="password"
@@ -70,6 +96,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
