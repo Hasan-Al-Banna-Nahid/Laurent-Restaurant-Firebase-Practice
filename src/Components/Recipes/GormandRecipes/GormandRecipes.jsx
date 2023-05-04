@@ -1,7 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const GormandRecipes = () => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const handleFavorite = () => {
+    localStorage.setItem("item", JSON.stringify("Tater Tot Casseroles"));
+    toast("Added To Favorite");
+    setIsFavorite(true);
+  };
   const [data, setData] = useState();
   console.log(data);
   useEffect(() => {
@@ -102,6 +109,15 @@ const GormandRecipes = () => {
             </div>
           </div>
         </div>
+        <button
+          onClick={handleFavorite}
+          style={{ width: "10rem", margin: "0 auto" }}
+          className="btn btn-outline-danger"
+          disabled={isFavorite}
+        >
+          Favorite
+        </button>
+        <ToastContainer />
       </div>
     </div>
   );
