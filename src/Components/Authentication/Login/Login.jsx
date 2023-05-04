@@ -8,12 +8,36 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { user, loginHandler } = useContext(AuthContext);
+  const { user, loginHandler, googleLoginHandler, githubLoginHandler } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
   const navigate = useNavigate();
 
+  const handleGoogleLogin = () => {
+    googleLoginHandler()
+      .then((result) => {
+        const user = result.user;
+        toast("Login With Google Successfully");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubLoginHandler()
+      .then((result) => {
+        const user = result.user;
+        toast("Login With Github Successfully");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
@@ -48,6 +72,7 @@ const Login = () => {
             <h5>Login Using With Your Favorite Preference</h5>
             <div style={{ marginTop: "100px" }}>
               <button
+                onClick={handleGoogleLogin}
                 className="btn btn-outline-success loginBtn"
                 style={{ margin: "10px 0" }}
               >
@@ -55,6 +80,7 @@ const Login = () => {
               </button>
               <br />
               <button
+                onClick={handleGithubLogin}
                 className="btn btn-outline-dark loginBtn"
                 style={{ margin: "30px 0" }}
               >

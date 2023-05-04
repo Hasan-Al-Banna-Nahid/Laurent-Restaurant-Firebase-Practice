@@ -1,8 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
@@ -36,16 +33,18 @@ const Header = () => {
         <div style={{ padding: "10px", fontSize: "2rem" }}>
           <Link to="/register">
             {user && (
-              <img
-                style={{
-                  borderRadius: "50%",
-                  width: "80px",
-                  height: "80px",
-                  padding: "10px",
-                }}
-                src={user.photoURL}
-                alt=""
-              />
+              <div>
+                <img
+                  style={{
+                    borderRadius: "50%",
+                    width: "80px",
+                    height: "80px",
+                    padding: "10px",
+                  }}
+                  src={user.photoURL}
+                  alt=""
+                />
+              </div>
             )}
 
             {user ? <FaSignOutAlt onClick={handleLogOut} /> : <FaSignInAlt />}

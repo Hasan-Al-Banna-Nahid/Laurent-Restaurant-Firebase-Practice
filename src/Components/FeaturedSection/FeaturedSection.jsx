@@ -46,7 +46,7 @@ const FeaturedSection = () => {
         </div>
         <div className="card">
           <img
-            src="../../../public/assests/berry.jpg"
+            src="../../../public/assests/dish2.jpg"
             className="card-img-top rounded-2"
             alt="..."
           />
