@@ -25,7 +25,7 @@ const Header = () => {
         </div>
         <div>
           <Link>Home</Link>
-          <Link>Recipes</Link>
+          <Link to="/recipes">Recipes</Link>
           <Link to="/blog">Blogs</Link>
           <Link>About Us</Link>
           <Link>Contact Us</Link>
@@ -33,7 +33,7 @@ const Header = () => {
         <div style={{ padding: "10px", fontSize: "2rem" }}>
           <Link to="/register">
             {user && (
-              <div>
+              <div className="user-container">
                 <img
                   style={{
                     borderRadius: "50%",
@@ -44,6 +44,7 @@ const Header = () => {
                   src={user.photoURL}
                   alt=""
                 />
+                <div className="email-tooltip">{user.email}</div>
               </div>
             )}
 

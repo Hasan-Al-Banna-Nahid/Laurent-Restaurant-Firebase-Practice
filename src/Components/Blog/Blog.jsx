@@ -1,7 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import jsPDF from "jspdf";
 
 const Blog = () => {
+  const handleDownload = () => {
+    const pdf = new jsPDF();
+    pdf.text("Your PDF Is Downloading", 10, 10); // Replace this with your actual PDF content
+    pdf.save("download.pdf");
+  };
   return (
     <div
       style={{
@@ -10,8 +16,11 @@ const Blog = () => {
         flexDirection: "column",
         fontWeight: "800",
         padding: "30px",
+        margin: "20px auto",
+        gap: "30px",
       }}
     >
+      <h3 className="title">Questions</h3>
       <div>
         <h4 style={{ color: "#130f40" }}>
           1.Differences between uncontrolled and controlled components?
@@ -49,6 +58,13 @@ const Blog = () => {
           and again while rendering the whole code.
         </p>
       </div>
+      <button
+        onClick={handleDownload}
+        style={{ margin: "0 auto" }}
+        className="btn btn-danger"
+      >
+        Download
+      </button>
     </div>
   );
 };

@@ -15,12 +15,19 @@ import MitchelRecipe from "./Components/Recipes/MitchelRecipe/MitchelRecipe";
 import AtlasRecipe from "./Components/Recipes/AtlasRecipe/AtlasRecipe";
 import GormandRecipes from "./Components/Recipes/GormandRecipes/GormandRecipes";
 import Blog from "./Components/Blog/Blog";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import Error from "./Components/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+
     children: [
+      {
+        path: "*",
+        element: <Error />,
+      },
       {
         path: "/",
         element: <Banner />,
@@ -40,28 +47,53 @@ const router = createBrowserRouter([
       },
       {
         path: "/masonData",
-        element: <MasonRecipe />,
+        element: (
+          <ProtectedRoute>
+            <MasonRecipe />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/sophieData",
-        element: <ShopieRecipe />,
+        element: (
+          <ProtectedRoute>
+            <ShopieRecipe />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/woodsRecipe",
-        element: <WoodsRecipe />,
+        element: (
+          <ProtectedRoute>
+            <WoodsRecipe />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/MitchelRecipe",
-        element: <MitchelRecipe />,
+        element: (
+          <ProtectedRoute>
+            <MitchelRecipe />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/atlasRecipe",
-        element: <AtlasRecipe />,
+        element: (
+          <ProtectedRoute>
+            <AtlasRecipe />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/gormandRecipe",
-        element: <GormandRecipes />,
+        element: (
+          <ProtectedRoute>
+            <GormandRecipes />
+          </ProtectedRoute>
+        ),
       },
+
       {
         path: "/blog",
         element: <Blog />,

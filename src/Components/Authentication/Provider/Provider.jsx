@@ -20,28 +20,34 @@ export const AuthContext = createContext(null);
 
 const Provider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (loggedUser) => {
       setUser(loggedUser);
+      setLoading(false);
     });
     return () => {
       unSubscribe();
     };
   }, []);
   const emailPasswordSignUpHandler = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const loginHandler = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const logOutHandler = () => {
     return signOut(auth);
   };
   const googleLoginHandler = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const githubLoginHandler = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
   const authInfo = {
@@ -50,6 +56,7 @@ const Provider = ({ children }) => {
     logOutHandler,
     googleLoginHandler,
     githubLoginHandler,
+    loading,
     user,
   };
   return (
