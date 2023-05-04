@@ -4,6 +4,7 @@ import React from "react";
 import "./Team.css";
 import Sponsor from "../Sponsor/Sponsor";
 import { FaStar, FaStarHalf } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -33,6 +34,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
           </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
+          </div>
         </div>
         <div>
           <img
@@ -50,6 +56,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
+          </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
           </div>
         </div>
         <div>
@@ -70,6 +81,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStarHalf style={{ color: "#fdcb6e" }} />
+          </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
           </div>
         </div>
         <div>
@@ -92,6 +108,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStarHalf style={{ color: "#fdcb6e" }} />
           </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
+          </div>
         </div>
         <div>
           <img
@@ -112,6 +133,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
           </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
+          </div>
         </div>
         <div>
           <img
@@ -129,6 +155,11 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
+          </div>
+          <div>
+            <Link to="/recipes">
+              <button className="btn btn-outline-danger">See Recipe</button>
+            </Link>
           </div>
         </div>
       </div>
