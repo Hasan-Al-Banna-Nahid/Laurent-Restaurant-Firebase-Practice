@@ -11,7 +11,7 @@ const ShopieRecipe = () => {
     setIsFavorite(true);
   };
   useEffect(() => {
-    fetch("http://localhost:5000/recipes/2")
+    fetch("https://serverside-iamnahid591998-gmailcom.vercel.app/recipes/2")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

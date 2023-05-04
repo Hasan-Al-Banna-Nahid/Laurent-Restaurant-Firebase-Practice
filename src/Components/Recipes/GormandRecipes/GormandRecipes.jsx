@@ -12,7 +12,7 @@ const GormandRecipes = () => {
   const [data, setData] = useState();
   console.log(data);
   useEffect(() => {
-    fetch("http://localhost:5000/recipes/6")
+    fetch("https://serverside-iamnahid591998-gmailcom.vercel.app/recipes/6")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

@@ -43,7 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/recipes",
         element: <Recipes />,
-        loader: () => fetch(`http://localhost:5000/recipes`),
+        loader: () =>
+          fetch(
+            `https://serverside-iamnahid591998-gmailcom.vercel.app/recipes`
+          ),
       },
       {
         path: "/masonData",

@@ -12,7 +12,7 @@ const MitchelRecipe = () => {
   };
   console.log(data);
   useEffect(() => {
-    fetch("http://localhost:5000/recipes/4")
+    fetch("https://serverside-iamnahid591998-gmailcom.vercel.app/recipes/4")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

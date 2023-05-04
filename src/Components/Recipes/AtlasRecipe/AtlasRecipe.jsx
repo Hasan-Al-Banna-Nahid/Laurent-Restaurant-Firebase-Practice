@@ -12,7 +12,7 @@ const AtlasRecipe = () => {
   };
   console.log(data);
   useEffect(() => {
-    fetch("http://localhost:5000/recipes/5")
+    fetch("https://serverside-iamnahid591998-gmailcom.vercel.app/recipes/5")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
