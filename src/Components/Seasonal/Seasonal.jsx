@@ -2,6 +2,7 @@
 import React from "react";
 import "./Seasonal.css";
 import Team from "../Team/Team";
+import Menu from "../FoodMenu/Menu";
 
 const Seasonal = () => {
   return (
@@ -63,6 +64,7 @@ const Seasonal = () => {
           </div>
         </div>
       </div>
+      <Menu />
       <Team />
     </div>
   );

@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  padding: 20px;
+  border-top: 0.3rem solid #636e72;
+  border-left: 0.3rem solid #c0392b;
+  border-bottom: 0.3rem solid #8e44ad;
+  border-right: 0.3rem solid #27ae60;
+}
+.items {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 20px 0;
+  padding: 20px;
+  border-bottom: 0.2rem solid #2c3e50;
+}
+.border1 {
+  border-right: 0.4rem solid #6c5ce7;
+}
+.border2 {
+  border-right: 0.4rem solid #2d3436;
+}
+.border3 {
+  border-right: 0.4rem solid #00b894;
+}
+.items h4 {
+  color: #2c3e50;
+  font-weight: 800;
+}
+.items p {
+  color: #7f8c8d;
+  font-weight: 700;
+}
