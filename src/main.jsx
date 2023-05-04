@@ -14,6 +14,7 @@ import WoodsRecipe from "./Components/Recipes/WoodsRecipe/WoodsRecipe";
 import MitchelRecipe from "./Components/Recipes/MitchelRecipe/MitchelRecipe";
 import AtlasRecipe from "./Components/Recipes/AtlasRecipe/AtlasRecipe";
 import GormandRecipes from "./Components/Recipes/GormandRecipes/GormandRecipes";
+import Blog from "./Components/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/gormandRecipe",
         element: <GormandRecipes />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },
