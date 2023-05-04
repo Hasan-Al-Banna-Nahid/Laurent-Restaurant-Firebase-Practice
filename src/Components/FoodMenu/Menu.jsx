@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Menu.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -24,7 +25,9 @@ const Menu = () => {
                     gooseberries for half of the blueberries. —Nancy Barker,
                     Silverton, Oregon
                   </p>
-                  <button className="btn btn-danger">See recipe</button>
+                  <Link to="/recipes">
+                    <button className="btn btn-danger">See recipe</button>
+                  </Link>
                 </div>
                 <div>
                   <h4>$36</h4>

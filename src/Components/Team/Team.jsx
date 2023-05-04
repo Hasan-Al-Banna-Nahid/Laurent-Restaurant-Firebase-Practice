@@ -42,9 +42,7 @@ const Team = () => {
           />
           <h4 className="designation name">Sophie </h4>
           <h5 className="designation">Cook</h5>
-          <p className="info">
-            Sophie Is Laurent Official Cook For Best Serving Food
-          </p>
+          <p className="info">Sophie Is Laurent Official Cook For Best Food</p>
           <p className="experience">7+ Years Of Experience</p>
           <div>
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -123,7 +121,7 @@ const Team = () => {
           />
           <h4 className="designation name">Gormand</h4>
           <h5 className="designation">Senior Chef</h5>
-          <p className="info">Gormand Is Senior Cook With Mason.</p>
+          <p className="info">Gormand Is Senior Cook With Mason</p>
           <p className="experience">6+ Years Of Experience</p>
           <div>
             <FaStar style={{ color: "#fdcb6e" }} />
