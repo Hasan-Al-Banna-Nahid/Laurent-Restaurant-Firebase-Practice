@@ -1,12 +1,20 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import "./Team.css";
 import Sponsor from "../Sponsor/Sponsor";
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import { FaStar, FaStarHalf, FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Team = () => {
+  const [likes, setLikes] = useState(10);
+
+  const handlePlusLikeClick = () => {
+    setLikes(likes + 1);
+  };
+  const handleMinusLikeClick = () => {
+    setLikes(likes - 1);
+  };
   return (
     <div style={{ margin: "60px 0" }}>
       <h3 className="title">The Team</h3>
@@ -27,6 +35,25 @@ const Team = () => {
             Food Experience
           </p>
           <p className="experience">8+ Years Of Experience</p>
+          <div className="flex">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
           <div>
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -34,6 +61,7 @@ const Team = () => {
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
           </div>
+
           <div>
             <Link to="/recipes">
               <button className="btn btn-outline-danger">See Recipe</button>
