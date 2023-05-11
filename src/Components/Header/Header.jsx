@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { FaSignInAlt } from "react-icons/fa";
 import { AuthContext } from "../Authentication/Provider/Provider";
 
 const Header = () => {
@@ -41,14 +41,23 @@ const Header = () => {
                     height: "80px",
                     padding: "10px",
                   }}
-                  src={user.photoURL}
+                  src={user?.photoURL}
                   alt=""
                 />
-                <div className="email-tooltip">{user.email}</div>
+                <div className="email-tooltip">{user?.displayName}</div>
               </div>
             )}
 
-            {user ? <FaSignOutAlt onClick={handleLogOut} /> : <FaSignInAlt />}
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="btn btn-wide btn-outline btn-info font-semibold"
+              >
+                LogOut
+              </button>
+            ) : (
+              <FaSignInAlt />
+            )}
           </Link>
         </div>
       </div>
