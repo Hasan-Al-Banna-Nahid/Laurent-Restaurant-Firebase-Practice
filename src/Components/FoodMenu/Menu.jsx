@@ -9,7 +9,7 @@ const Menu = () => {
       <div>
         <h2 className="title">Discover Menu</h2>
         <hr />
-        <h4 className="subtitle my-4">CHOOSE AND TRY</h4>
+        <h4 className="subtitle my-4 text-3xl">CHOOSE AND TRY</h4>
       </div>
       <div className="grid">
         <div>

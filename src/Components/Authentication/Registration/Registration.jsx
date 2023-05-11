@@ -78,13 +78,13 @@ const Registration = () => {
   return (
     <div>
       <div className="register">
-        <p className="appleBtn">
+        <div className="appleBtn flex">
           <FaCircle style={{ marginRight: "5px", color: "#F16163" }} />{" "}
           <FaCircle style={{ marginRight: "5px", color: "#FCBD37" }} />{" "}
           <FaCircle style={{ color: "#3CC246" }} />
-        </p>
+        </div>
         <div className="socialLink">
-          <div className="text-center">
+          <div className="text-center text-2xl font-bold">
             <h4>
               <FaAutoprefixer style={{ color: "#05c46b", fontSize: "2rem" }} />{" "}
               Authentication
@@ -93,7 +93,7 @@ const Registration = () => {
             <div style={{ marginTop: "100px" }}>
               <button
                 onClick={handleGoogleLogin}
-                className="btn btn-outline-success loginBtn"
+                className="btn btn-outline btn-success loginBtn"
                 style={{ margin: "10px 0" }}
               >
                 Login With Google
@@ -101,7 +101,7 @@ const Registration = () => {
               <br />
               <button
                 onClick={handleGithubLogin}
-                className="btn btn-outline-dark loginBtn"
+                className="btn btn-outline btn-dark loginBtn"
                 style={{ margin: "30px 0" }}
               >
                 Login With Github

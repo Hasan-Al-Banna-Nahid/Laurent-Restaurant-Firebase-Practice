@@ -9,7 +9,7 @@ const FeaturedSection = () => {
       <div>
         <h2 className="title">Who We Are?</h2>
         <hr />
-        <h4 className="subtitle">Everything You Want To Know</h4>
+        <h4 className="subtitle text-3xl">Everything You Want To Know</h4>
       </div>
       <div className="card-group mx-auto px-5">
         <div className="card">

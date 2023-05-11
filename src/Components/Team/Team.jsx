@@ -18,7 +18,7 @@ const Team = () => {
   return (
     <div style={{ margin: "60px 0" }}>
       <h3 className="title">The Team</h3>
-      <h5 className="subtitle" style={{ margin: "20px 0" }}>
+      <h5 className="subtitle text-3xl" style={{ margin: "20px 0" }}>
         Meet Our Chefs
       </h5>
       <div className="team">
@@ -26,7 +26,7 @@ const Team = () => {
           <img
             src="../../../public/assests/chef1.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Mason Robinson</h4>
           <h5 className="designation">Chef</h5>
@@ -35,7 +35,7 @@ const Team = () => {
             Food Experience
           </p>
           <p className="experience">8+ Years Of Experience</p>
-          <div className="flex">
+          <div className="flex ml-14">
             <div>
               <button
                 className={`like-button `}
@@ -54,7 +54,7 @@ const Team = () => {
               <span className="likes-counter">{`Like | ${likes}`}</span>
             </div>
           </div>
-          <div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -72,13 +72,32 @@ const Team = () => {
           <img
             src="../../../public/assests/chef2.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Sophie </h4>
           <h5 className="designation">Cook</h5>
           <p className="info">Sophie Is Laurent Official Cook For Best Food</p>
           <p className="experience">7+ Years Of Experience</p>
-          <div>
+          <div className="flex ml-14">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -95,7 +114,7 @@ const Team = () => {
           <img
             src="../../../public/assests/chef6.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Nick Woods</h4>
           <h5 className="designation">Sous Chef</h5>
@@ -103,7 +122,26 @@ const Team = () => {
             Wood Is Assistant Cook With Mason.He Is Desert Specialist
           </p>
           <p className="experience">6+ Years Of Experience</p>
-          <div>
+          <div className="flex ml-14">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -120,7 +158,7 @@ const Team = () => {
           <img
             src="../../../public/assests/chef5.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Mitchel</h4>
           <h5 className="designation">Assistant Chef</h5>
@@ -129,7 +167,26 @@ const Team = () => {
             Specialist
           </p>
           <p className="experience">5+ Years Of Experience</p>
-          <div>
+          <div className="flex ml-14">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -146,7 +203,7 @@ const Team = () => {
           <img
             src="../../../public/assests/chef7.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Atlas</h4>
           <h5 className="designation">Desert Chef</h5>
@@ -154,7 +211,26 @@ const Team = () => {
             Atlas Is Our Prime Desert Cook.He Is Desert Specialist
           </p>
           <p className="experience">8+ Years Of Experience</p>
-          <div>
+          <div className="flex ml-14">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
@@ -171,13 +247,32 @@ const Team = () => {
           <img
             src="../../../public/assests/chef4.jpg"
             alt=""
-            className="chef"
+            className="chef mx-auto"
           />
           <h4 className="designation name">Gormand</h4>
           <h5 className="designation">Senior Chef</h5>
           <p className="info">Gormand Is Senior Cook With Mason</p>
           <p className="experience">6+ Years Of Experience</p>
-          <div>
+          <div className="flex ml-14">
+            <div>
+              <button
+                className={`like-button `}
+                onClick={handlePlusLikeClick}
+                disabled={likes === 100}
+              >
+                <FaPlus />
+              </button>
+              <button
+                className={`like-button `}
+                onClick={handleMinusLikeClick}
+                disabled={likes === 0}
+              >
+                <FaMinus />
+              </button>
+              <span className="likes-counter">{`Like | ${likes}`}</span>
+            </div>
+          </div>
+          <div className="flex my-4 ml-28">
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />
             <FaStar style={{ color: "#fdcb6e" }} />

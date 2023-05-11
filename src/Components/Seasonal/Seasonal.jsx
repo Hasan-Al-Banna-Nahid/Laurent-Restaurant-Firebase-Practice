@@ -10,7 +10,7 @@ const Seasonal = () => {
       <div>
         <h2 className="title">Seasonal</h2>
         <hr />
-        <h4 className="subtitle my-4">Enjoy Every Moment</h4>
+        <h4 className="subtitle my-4 text-3xl">Enjoy Every Moment</h4>
       </div>
       <div>
         <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -23,13 +23,13 @@ const Seasonal = () => {
               />
               <div className="card-body">
                 <div className="d-flex align-items-center justify-content-evenly price">
-                  <div>
-                    <h5 className="card-title title">
+                  <div className="mr-2">
+                    <h5 className="card-title title text-6xl">
                       <sup>$</sup>50
                     </h5>
                   </div>
                   <div>
-                    <h4 className="package">Starter</h4>
+                    <h4 className="package text-lg">Starter</h4>
                     <p className="card-text subtitle">
                       Try Our Everyday Starter At Reasonable Price
                     </p>
@@ -47,13 +47,13 @@ const Seasonal = () => {
               />
               <div className="card-body">
                 <div className="d-flex align-items-center justify-content-evenly price">
-                  <div className="price">
-                    <h5 className="card-title title">
+                  <div className="price mr-2">
+                    <h5 className="card-title title text-6xl">
                       <sup>$</sup>100
                     </h5>
                   </div>
                   <div>
-                    <h4 className="package">Premium</h4>
+                    <h4 className="package text-lg">Premium</h4>
                     <p className="card-text subtitle">
                       Try Our Holiday Special At Happy Price
                     </p>

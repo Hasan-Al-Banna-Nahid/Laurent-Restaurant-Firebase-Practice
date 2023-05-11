@@ -1,3 +1,5 @@
-.error {
-  background-image: url("../../../../clientside/public/assests/error.jpg");
+.errorText {
+  position: absolute;
+  top: 85%;
+  left: 7%;
 }
