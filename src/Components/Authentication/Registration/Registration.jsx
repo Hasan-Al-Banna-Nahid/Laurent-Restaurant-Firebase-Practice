@@ -66,6 +66,7 @@ const Registration = () => {
         setSuccess("User Created Successfully");
         setError("");
         form.reset();
+        navigate("/");
       })
       .catch((err) => {
         console.log(err.message);
@@ -154,6 +155,7 @@ const Registration = () => {
               placeholder="Please Confirm Password"
               required
             />
+            <p>{error}</p>
             <div>
               <button className="btn btn-primary fs-2 w-100">Register</button>
             </div>

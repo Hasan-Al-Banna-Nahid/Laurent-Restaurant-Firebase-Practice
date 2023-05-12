@@ -65,7 +65,6 @@ const Seasonal = () => {
         </div>
       </div>
       <Menu />
-      <Team />
     </div>
   );
 };

@@ -2,6 +2,7 @@
 import React from "react";
 import "./Menu.css";
 import { Link } from "react-router-dom";
+import Team from "../Team/Team";
 
 const Menu = () => {
   return (
@@ -11,7 +12,7 @@ const Menu = () => {
         <hr />
         <h4 className="subtitle my-4 text-3xl">CHOOSE AND TRY</h4>
       </div>
-      <div className="grid">
+      <div className="menu">
         <div>
           <div>
             <div>
@@ -119,6 +120,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
+      <Team />
     </div>
   );
 };

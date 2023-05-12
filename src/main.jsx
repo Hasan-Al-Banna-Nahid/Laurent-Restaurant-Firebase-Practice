@@ -7,7 +7,6 @@ import Banner from "./Components/Banner/Banner";
 import Registration from "./Components/Authentication/Registration/Registration";
 import Login from "../src/Components/Authentication/Login/Login";
 import Provider from "./Components/Authentication/Provider/Provider";
-import Recipes from "./Components/Recipes/Recipes";
 import MasonRecipe from "./Components/Recipes/MasonRecipe/MasonRecipe";
 import ShopieRecipe from "./Components/Recipes/ShopieRecipe/ShopieRecipe";
 import WoodsRecipe from "./Components/Recipes/WoodsRecipe/WoodsRecipe";
@@ -17,6 +16,7 @@ import GormandRecipes from "./Components/Recipes/GormandRecipes/GormandRecipes";
 import Blog from "./Components/Blog/Blog";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import Error from "./Components/Error/Error";
+import Team from "./Components/Team/Team";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,12 @@ const router = createBrowserRouter([
         element: <Banner />,
       },
       {
+        path: "/team/:id",
+        element: <Team />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/recipes/${params.id}`),
+      },
+      {
         path: "/register",
         element: <Registration />,
       },
@@ -40,14 +46,7 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      {
-        path: "/recipes",
-        element: <Recipes />,
-        loader: () =>
-          fetch(
-            `https://serverside-iamnahid591998-gmailcom.vercel.app/recipes`
-          ),
-      },
+
       {
         path: "/masonData",
         element: (

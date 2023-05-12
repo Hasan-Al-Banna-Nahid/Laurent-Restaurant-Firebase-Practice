@@ -23,7 +23,7 @@ const Header = () => {
             className="logo"
           />
         </div>
-        <div>
+        <div className="link text-decoration-none">
           <Link>Home</Link>
           <Link to="/recipes">Recipes</Link>
           <Link to="/blog">Blogs</Link>
@@ -40,6 +40,7 @@ const Header = () => {
                     width: "80px",
                     height: "80px",
                     padding: "10px",
+                    marginLeft: "85px",
                   }}
                   src={user?.photoURL}
                   alt=""

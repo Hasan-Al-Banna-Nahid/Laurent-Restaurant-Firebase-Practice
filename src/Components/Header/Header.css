@@ -14,7 +14,6 @@
   top: 30%;
   left: 0;
   transform: translateX(-50%);
-
   padding: 5px;
   border-radius: 5px;
 }
@@ -42,6 +41,9 @@
   .navbar {
     flex-direction: column;
     min-width: fit-content;
+  }
+  .link {
+    display: block;
   }
   .navbar a {
     display: block;
