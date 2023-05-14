@@ -17,6 +17,7 @@ import Blog from "./Components/Blog/Blog";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import Error from "./Components/Error/Error";
 import Team from "./Components/Team/Team";
+import Recipes from "./Components/Recipes/Recipes";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,16 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-
+      {
+        path: "/recipes/:id",
+        element: (
+          <ProtectedRoute>
+            <Recipes />
+          </ProtectedRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/recipes/${params.id}`),
+      },
       {
         path: "/masonData",
         element: (

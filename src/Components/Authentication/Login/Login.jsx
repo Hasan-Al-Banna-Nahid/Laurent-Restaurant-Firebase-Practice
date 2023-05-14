@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { FaAutoprefixer, FaCircle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -11,7 +11,8 @@ const Login = () => {
     useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
 
   const handleGoogleLogin = () => {
@@ -19,7 +20,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         toast("Login With Google Successfully");
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         console.log(err.message);
@@ -31,7 +32,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         toast("Login With Github Successfully");
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         console.log(err.message);
@@ -48,7 +49,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         toast("User Login Successfully");
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         toast("Sorry!!!Your Email & Password Did Not Match");

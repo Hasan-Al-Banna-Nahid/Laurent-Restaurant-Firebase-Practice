@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Authentication/Provider/Provider";
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
   if (loading) {
     return (
       <div
@@ -19,7 +20,9 @@ const ProtectedRoute = ({ children }) => {
   if (user) {
     return children;
   }
-  return <Navigate to="/login" replace={true}></Navigate>;
+  return (
+    <Navigate to="/login" state={{ from: location }} replace={true}></Navigate>
+  );
 };
 
 export default ProtectedRoute;
