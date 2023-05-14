@@ -2,6 +2,7 @@
 import React from "react";
 import "./Sponsor.css";
 import Marquee from "react-fast-marquee";
+import LazyLoad from "react-lazy-load";
 
 const Sponsor = () => {
   return (
@@ -10,19 +11,29 @@ const Sponsor = () => {
       <Marquee pauseOnHover={true} className="marquee">
         <div className="sponsors">
           <div>
-            <img src="../../../public/assests/sponsor1.png" alt="" />
+            <LazyLoad>
+              <img src="../../../public/assests/sponsor1.png" alt="" />
+            </LazyLoad>
           </div>
           <div>
-            <img src="../../../public/assests/sponsor2.png" alt="" />
+            <LazyLoad>
+              <img src="../../../public/assests/sponsor2.png" alt="" />
+            </LazyLoad>
           </div>
           <div>
-            <img src="../../../public/assests/sponsor3.png" alt="" />
+            <LazyLoad>
+              <img src="../../../public/assests/sponsor3.png" alt="" />
+            </LazyLoad>
           </div>
           <div>
-            <img src="../../../public/assests/sponsor4.png" alt="" />
+            <LazyLoad>
+              <img src="../../../public/assests/sponsor4.png" alt="" />
+            </LazyLoad>
           </div>
           <div>
-            <img src="../../../public/assests/sponsor5.png" alt="" />
+            <LazyLoad>
+              <img src="../../../public/assests/sponsor5.png" alt="" />
+            </LazyLoad>
           </div>
         </div>
       </Marquee>

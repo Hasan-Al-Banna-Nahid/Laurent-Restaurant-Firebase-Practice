@@ -5,6 +5,7 @@ import "./Team.css";
 import Sponsor from "../Sponsor/Sponsor";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 const Team = () => {
   const [data, setData] = useState([]);
@@ -27,7 +28,9 @@ const Team = () => {
         {data.map((item) => {
           return (
             <div key={item.id}>
-              <img src={item.photo} alt="" className="chef mx-auto" />
+              <LazyLoad>
+                <img src={item.photo} alt="" className="chef mx-auto" />
+              </LazyLoad>
               <h4 className="designation name">{item.name}</h4>
               <h5 className="designation">{item.designation}</h5>
               <p className="info">{item.bio}</p>
