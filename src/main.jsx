@@ -7,12 +7,6 @@ import Banner from "./Components/Banner/Banner";
 import Registration from "./Components/Authentication/Registration/Registration";
 import Login from "../src/Components/Authentication/Login/Login";
 import Provider from "./Components/Authentication/Provider/Provider";
-import MasonRecipe from "./Components/Recipes/MasonRecipe/MasonRecipe";
-import ShopieRecipe from "./Components/Recipes/ShopieRecipe/ShopieRecipe";
-import WoodsRecipe from "./Components/Recipes/WoodsRecipe/WoodsRecipe";
-import MitchelRecipe from "./Components/Recipes/MitchelRecipe/MitchelRecipe";
-import AtlasRecipe from "./Components/Recipes/AtlasRecipe/AtlasRecipe";
-import GormandRecipes from "./Components/Recipes/GormandRecipes/GormandRecipes";
 import Blog from "./Components/Blog/Blog";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import Error from "./Components/Error/Error";
@@ -56,54 +50,6 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/recipes/${params.id}`),
-      },
-      {
-        path: "/masonData",
-        element: (
-          <ProtectedRoute>
-            <MasonRecipe />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/sophieData",
-        element: (
-          <ProtectedRoute>
-            <ShopieRecipe />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/woodsRecipe",
-        element: (
-          <ProtectedRoute>
-            <WoodsRecipe />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/MitchelRecipe",
-        element: (
-          <ProtectedRoute>
-            <MitchelRecipe />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/atlasRecipe",
-        element: (
-          <ProtectedRoute>
-            <AtlasRecipe />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "/gormandRecipe",
-        element: (
-          <ProtectedRoute>
-            <GormandRecipes />
-          </ProtectedRoute>
-        ),
       },
 
       {
